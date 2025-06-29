@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+
+  transition: opacity 0.4s ease-in-out;
+}
+.ext-page {
+  opacity: 0;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-top: 32px;
+}
+.header-logo {
+  padding-left: 64px;
+}
+
+.line {
+  width: 750px;
+  border: 0.3px #979797 solid;
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+}
+header > .header-right {
+  position: relative;
+  display: flex;
+  width: 96px;
+  left: 15px;
+  align-items: center;
+  justify-content: right;
+  width: 49%;
+  
+  background-color: #1f1f1f00;
+  border: 1px solid rgba(255, 255, 255, 0.036);
+  
+
+  height: 96px;
+}
+.menu-links {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  background-color: #1f1f1f00;
+  backdrop-filter: blur(10px);
+}
+.number-span {
+  margin-right: 5px;
+  font-weight: 500;
+}
+.header-right > .menu-links > a {
+  font-weight: 200; /* Tek bir değer */
+  line-height: 1.4;
+  padding: 12px; /* Sadece biri kalsın */
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-decoration: none;
+  margin-right: 16px;
+  color: #fff;
+  height: 100%;
+  border-bottom: 2px solid transparent;
+}
+.menu-links > a.active {
+  border-bottom: 2px solid white;
+}
+.header-right > .menu-links a:hover {
+  border-bottom: 2px solid #b6b2b2;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffff;
+  height: calc(100vh - 128px);
+  width: 100%;
+  text-align: center;
+}
+.context {
+  padding-left: 160px;
+  display: flex;
+  width: 100%;
+  align-items: end;
+  justify-content: end;
+  margin-bottom: 140px;
+  flex-direction: column;
+  padding-bottom: 50px;
+
+  width: 100%;
+  align-items: center;
+}
+.word-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: start;
+}
+.travel-text {
+  color: #d0d6f9;
+  font-size: 32px;
+  font-weight: 200;
+}
+.space-h3 {
+  font-size: 148px;
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.paragraph-space {
+  font-family: "Barlow Condensed";
+  font-weight: 200;
+  color: #d0d6f9;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.6;
+  width: 540px;
+  height: 96px;
+}
+button {
+  cursor: pointer;
+  width: 272px;
+  height: 272px;
+  border-radius: 999px;
+  font-size: 32px;
+  font-weight: 100;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bellefair", serif;
+}
+.explore-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 250px;
+  width: 100%;
+}
+
+.white-circle {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+.explore-link {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bellefair", serif;
+  text-decoration: none;
+  color: #0b0d17;
+}
+/* hamburger menu */
+.hamburger-menu {
+  display: none;
+}
+@media (min-width: 250px) and (max-width: 768px) {
+  .line {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    padding: 3px;
+  }
+  header {
+    z-index: 10001;
+    margin: 0;
+    padding: 0;
+  }
+  .header-logo {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    position: fixed;
+    background-color: #0b0d178a;
+    
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .menu-links {
+    flex-direction: column;
+    position: fixed;
+    background-color: #0b0d178a;
+   
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 100px;
+    gap: 10px;
+    display: none;
+  }
+  .header-right > .menu-links > a {
+    height: 3px;
+  }
+ 
+  .container {
+    height: 100vh;
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-content: center;
+    
+  }
+  .context {
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+  }
+  .word-wrapper {
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .travel-text {
+    font-size: 16px;
+  }
+  .space-h3 {
+    font-size: 50px;
+  }
+  .paragraph-space {
+    width: 324px;
+    height: 135px;
+    font-size: 15px;
+  }
+  .explore-btn {
+    display: flex;
+
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #explore {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 144px;
+    height: 144px;
+  }
+  .menu-links > a.active {
+    border-right: 2px solid white;
+    border-bottom: none;
+  }
+  .header-right > .menu-links > a:hover {
+    border-bottom: none;
+    border-right: 2px solid#d0d6f9;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1260px) {
+  header {
+    margin: 0;
+    padding: 0;
+  }
+  .line {
+    display: none;
+  }
+  .header-right {
+    width: 90% !important;
+    justify-content: space-between;
+  }
+  .menu-links {
+    justify-content: space-around;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .context {
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+  }
+  .word-wrapper {
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .travel-text {
+    padding-top: 10px;
+    font-size: 28px;
+  }
+  .space-h3 {
+    font-size: 144px;
+  }
+  .paragraph-space {
+    text-align: center;
+    width: 324px;
+    height: 135px;
+    font-size: 16px;
+  }
+  .explore-btn {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #explore {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+  }
+}

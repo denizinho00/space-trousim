@@ -1,0 +1,476 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.tecnology {
+  background-image: url("assets/technology/background-technology-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+}
+
+body {
+  transition: opacity 0.4s ease-in-out;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-top: 32px;
+}
+
+.header-logo {
+  padding-left: 64px;
+}
+.line {
+  width: 750px;
+  border: 0.3px #979797 solid;
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+}
+header > .header-right {
+  display: flex;
+  width: 96px;
+  padding: 20px;
+  align-items: center;
+  justify-content: right;
+  width: 49%;
+  background-color: #1f1f1f00;
+
+  border: 1px solid rgba(255, 255, 255, 0.036);
+  backdrop-filter: blur(10px);
+}
+.menu-links {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+.number-span {
+  margin-right: 5px;
+  font-weight: 500;
+}
+.header-right > .menu-links > a {
+  font-weight: 200; /* Tek bir değer */
+  line-height: 1.4;
+  padding: 12px; /* Sadece biri kalsın */
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-decoration: none;
+  margin-right: 16px;
+  color: #fff;
+  height: 100%;
+  border-bottom: 2px solid transparent;
+}
+.header-right > .menu-links a:hover {
+  border-bottom: 2px solid #b6b2b2;
+}
+.menu-links > a.active {
+  border-bottom: 2px solid white;
+}
+.header-wrapper {
+  margin-top: 40px;
+}
+h2 {
+  padding-left: 230px;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 3px;
+}
+.header-span {
+  font-weight: bold;
+  color: #d0d6f9;
+}
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+    "content-left   content-right";
+  grid-template-columns: 1fr 0.79fr;
+  grid-template-rows: auto 1fr;
+  height: calc(100vh - 128px);
+}
+.text-header-wrapper {
+  grid-area: header;
+  margin-left: 10rem;
+}
+
+.content-grid-wrapper {
+  display: grid;
+  grid-row: auto 1fr;
+  align-items: center;
+  justify-content: end;
+}
+.terminology {
+  font-size: 32px;
+  font-family: "Bellefair", serif;
+  color: rgba(255, 255, 255, 0.567);
+}
+.vehicle {
+  font-size: 56px;
+  font-family: "Bellefair", serif;
+  color: white;
+}
+.text-content {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.5;
+}
+.img-div {
+  grid-area: content-right;
+}
+.description {
+  width: 500px;
+  line-height: 2;
+
+  color: #d0d6f9;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.buttons {
+  gap: 60px;
+
+  flex-direction: column;
+
+  grid-column: 1;
+  margin-right: 50px;
+  border-radius: 50%;
+}
+.num-btn {
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff5c;
+  color: #0b0d17;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+}
+.active-btn {
+  background-color: #fff;
+}
+.num-btn.hover-aktif:hover {
+  background-color: #ffffff8b;
+  cursor: pointer;
+}
+.img-div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.img-div > img {
+  width: 640px;
+  height: 640px;
+  object-fit: cover;
+  object-position: center;
+}
+.ext-page {
+  opacity: 0;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+/* hamburger menu */
+.hamburger-menu {
+  display: none;
+}
+@media screen and (min-width: 250px) and (max-width: 768px) {
+  header {
+    margin: 0;
+    padding: 0;
+  }
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    right: 0;
+    z-index: 111;
+  }
+  .menu-links > a.active {
+    border-bottom: none !important;
+    border-right: 1px solid white;
+  }
+  .header-right > .menu-links a:hover {
+    border-right: 1px solid #b6b2b2;
+    border-bottom: none !important;
+  }
+
+  .header-logo {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .text-header-wrapper {
+    width: 100%;
+
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    grid-area: header;
+  }
+
+  .text-header-wrapper > h2 {
+    text-align: center;
+    padding: 0;
+  }
+  .buttons {
+    width: 100%;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    flex-direction: row;
+    grid-area: button;
+    gap: 10px;
+  }
+  .line {
+    display: none;
+  }
+  .header-right {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    top: 0 !important;
+    top: 30px;
+  }
+  .menu-links {
+    height: 100%;
+    position: relative;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .header-right > .menu-links > a {
+    font-size: 16px;
+  }
+  .container {
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content-right"
+      "content-left";
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    border: 2px;
+  }
+  .content-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "button"
+      "context";
+
+    height: 400px;
+    gap: 10px;
+    justify-content: start;
+    align-items: start;
+    grid-area: content-left;
+    padding: 0;
+  }
+  .text-content {
+    height: 300px;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    grid-area: context;
+  }
+  .terminology {
+    text-align: center;
+    font-size: 16px;
+  }
+  .text-header-wrapper > h2 {
+    grid-area: header;
+    font-size: 18px;
+  }
+  .vehicle {
+    height: auto;
+    text-align: center;
+    font-size: 24px;
+  }
+  .description {
+    width: 90%;
+
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-align: center;
+  }
+  .num-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .img-div {
+    display: flex;
+    flex-direction: column;
+    grid-area: content-right;
+
+    width: 100%;
+  }
+  .img-div > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1260px) {
+  header {
+    margin: 0;
+    padding: 0;
+  }
+  .header-logo {
+    padding-left: 10px;
+  }
+  header > .header-right {
+    width: 90%;
+    display: flex;
+  }
+  .header-right > .menu-links {
+    display: flex;
+    justify-content: space-around;
+  }
+  .text-header-wrapper {
+    width: auto;
+
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    text-align: center;
+    grid-area: header;
+  }
+
+  .text-header-wrapper > h2 {
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+  }
+  .buttons {
+    width: 100%;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    flex-direction: row;
+    grid-area: button;
+    gap: 10px;
+  }
+  .buttons > .num-btn {
+    width: 56px;
+    height: 56px;
+  }
+  .line {
+    display: none;
+  }
+
+  .header-right > .menu-links > a {
+    font-size: 16px;
+  }
+  .container {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content-right"
+      "content-left";
+    grid-template-columns: auto auto auto;
+    width: 100%;
+
+    border: 2px;
+  }
+  .content-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "button"
+      "context";
+
+    height: 400px;
+    gap: 10px;
+    justify-content: start;
+    align-items: start;
+    grid-area: content-left;
+    padding: 0;
+  }
+  .text-content {
+    height: 300px;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    grid-area: context;
+  }
+  .terminology {
+    text-align: center;
+    font-size: 16px;
+  }
+  .text-header-wrapper > h2 {
+    grid-area: header;
+    font-size: 20px;
+  }
+  .vehicle {
+    height: auto;
+    text-align: center;
+    font-size: 24px;
+  }
+  .description {
+     
+
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-align: center;
+  }
+  .num-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .img-div {
+    display: flex;
+    flex-direction: column;
+    grid-area: content-right;
+    
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .img-div > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
